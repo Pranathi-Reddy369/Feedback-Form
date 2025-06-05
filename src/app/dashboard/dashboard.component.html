@@ -1,0 +1,30 @@
+<h1> 🎓Student Dashboard</h1>
+<div>
+  <input
+    [(ngModel)]="studentName"
+    placeholder="Enter Name"
+    type="text"
+  />
+  <input
+    [(ngModel)]="studentGrade"
+    placeholder="Enter Grade (A/B/C)"
+    type="text"
+  />
+  <button (click)="addStudent()">Add Student</button>
+</div>
+<div>
+  <h2>Student List</h2>
+  <ul>
+    <li *ngFor="let student of students">
+      <p [ngStyle]="{'color': student.grade === 'A' ? 'green' : student.grade === 'B' ? 'blue' : student.grade==='C' ? 'orange':'red'}">
+      🧑‍🎓{{ student.name }} - {{ student.grade }}<span [ngSwitch]="student.grade">
+      <span *ngSwitchCase="'A'"> (🫡Excellent)</span>
+      <span *ngSwitchCase="'B'"> (👍Good)</span>
+      <span *ngSwitchCase="'C'"> (🙌Needs Improvement) </span>
+      <span *ngSwitchDefault > (🤦‍♂️Sakkaga enter chey)</span>
+      </span>
+      </p>
+    </li>
+  </ul>
+
+
