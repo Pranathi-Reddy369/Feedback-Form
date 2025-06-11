@@ -1,0 +1,22 @@
+<div class="list-items">
+    <div *ngIf="result?.length === 0">🚫 No tasks available.</div>
+
+<ul>
+<li class="li-items" *ngFor="let task of result; let i = index" 
+    [ngStyle]="{ color: getColor(task.priority) }"
+    [ngClass]="{ completed: task.status === 'Completed' }">       
+     <p>📝 {{task.name}}  -   Priority:  {{task.priority}}
+        <span [ngSwitch]="task.priority">
+            <span *ngSwitchCase="'High'">🔴</span>
+            <span *ngSwitchCase="'Medium'">🟠</span>
+            <span *ngSwitchCase="'Low'">🟢</span>
+        </span> | 
+          Status:<span *ngIf="task.status === 'Pending'">⏳ Pending</span>
+      <span *ngIf="task.status === 'Completed'">✅ Completed</span>
+
+      <button class="btn-mrk" *ngIf="task.status === 'Pending'" (click)="onComplete(i)">
+        Mark as Completed
+      </button>
+    </li>
+</ul>
+</div>

@@ -5,6 +5,12 @@
     border-color:black;
     padding:5px;
 }
+.heading{
+    color:black;
+    font-size:2rem;
+    font-weight:bold;
+
+}
 .btn{
     /* background-color: rgb(108, 88, 23); */
     color:black;
@@ -14,6 +20,15 @@
     border-color:rgb(119, 94, 35);
     width:100px;
 }
-img{
-    width: 250px;
+.table{
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center
+}
+*{
+    /* background-color: rgb(186, 148, 64); */
+}
+.heading{
+    justify-content: left;
 }

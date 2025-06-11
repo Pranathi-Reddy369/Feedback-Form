@@ -5,10 +5,14 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { CounterComponent } from './counter/counter.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ChilddComponent } from './childd/childd.component';
+import { ParentComponent } from './parent/parent.component';
+import { TaskParentComponent } from './task-parent/task-parent.component';
+import { TaskChildComponent } from './task-child/task-child.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,ChildComponent,CommonModule,FormsModule,CounterComponent,DashboardComponent],
+  imports: [RouterOutlet,ChildComponent,CommonModule,FormsModule,CounterComponent,DashboardComponent,ChilddComponent,ParentComponent,TaskParentComponent,TaskChildComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

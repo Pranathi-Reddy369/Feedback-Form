@@ -1,0 +1,15 @@
+<div class="table">
+    <div class="heading">Task-Manager</div>
+    <label for="name">Task Name</label>
+<input class="inp" type="text" id="name" [(ngModel)]="taskName" placeholder="Enter task name" />
+<select class="inp" [(ngModel)]="taskPriority">
+    <option value="High">High</option>
+    <option value="Medium">Medium</option>
+    <option value="Low">Low</option>
+</select>
+<div>
+<button class="btn" (click)="addTask()" >Add Task</button>
+</div>
+</div>
+<app-task-child [result]="tasks" (childCompleteTask)="markAsCompleted($event)"></app-task-child>
+<!-- <p [ngStyle]="{color: isTrue ? 'Green' :'red'}">Hello</p> -->

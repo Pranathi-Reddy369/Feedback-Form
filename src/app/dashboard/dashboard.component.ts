@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 export class DashboardComponent {
   studentName: string = '';
   studentGrade: string = '';
+  greeting :string = 'Welcome to the Student Dashboard!';
   color :string="";
   students: { name: string; grade: string }[] = [];
   addStudent(){
