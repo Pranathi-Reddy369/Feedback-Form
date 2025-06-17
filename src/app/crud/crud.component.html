@@ -1,0 +1,57 @@
+<div class="form-container">
+  <div class="form-item">
+    <label for="taskName">Task:</label>
+    <input
+      id="taskName"
+      [(ngModel)]="taskForm.taskName"
+      class="task-input"
+      type="text"
+      placeholder="Enter task name"
+    />
+  </div>
+
+  <div class="form-item">
+    <label for="assignee">Assign To:</label>
+    <input
+      id="assignee"
+      [(ngModel)]="taskForm.assignee"
+      class="task-input"
+      type="text"
+      placeholder="Enter assignee name"
+    />
+  </div>
+
+  <div class="form-item">
+    <label for="status">Status:</label>
+    <select id="status" [(ngModel)]="taskForm.status" class="task-input">
+      <option>Yet to start</option>
+      <option>In Progress</option>
+      <option>Completed</option>
+    </select>
+  </div>
+
+  <div class="form-item">
+    <button class="btn" (click)="addOrUpdateTask()">Add Task</button>
+  </div>
+</div>
+
+<!-- 📋 Table Section -->
+<div class="table">
+  <div class="row header-row">
+    <div class="cell">Task</div>
+    <div class="cell">Assignee</div>
+    <div class="cell">Status</div>
+    <div class="cell">Action</div>
+  </div>
+
+  <!-- Dynamic task rows -->
+  <div class="row" *ngFor="let task of tasks">
+    <div class="cell">{{ task.taskName }}</div>
+    <div class="cell">{{ task.assignee }}</div>
+    <div class="cell">{{ task.status }}</div>
+    <div class="cell">
+      <button class="action-btn" (click)="editTask(task)">Edit</button>
+      <button class="action-btn delete" (click)="deleteTask(task)">Delete</button>
+    </div>
+  </div>
+</div>

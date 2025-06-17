@@ -8,26 +8,22 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './child.component.css'
 })
 export class ChildComponent {
-  isToggle = true;
-
-  @Input() parentMessage!: string;
-  counter = 0;
-  interval : any;
-  constructor() {
-    console.log("Child Constructor Triggered!");
-  }
-
-  ngOnInit(): void {
-    console.log("OnInit is triggered!");
-    setInterval(()=>{
-      this.counter++;
-      console.log(this.counter);
-    },1000);
-  }
-
-  ngOnDestory() : void {
-    console.log("ngOnDestory is Triggered!")
-  }
+  @Input() counter=0; 
+  name="anil";
+//  constructor(){
+//   console.log("Constructor is running")
+//   this.name="si d";
+//  }
+//  ngOnInit(){
+//   console.log("ngOnInit is running")
+//   this.name="Sam";
+//  }
+//  ngOnDestroy(){
+//   console.log("ngOnDestroy is running")
+//  }
+ ngOnChange(){
+  console.log("ngOnChange is running")
+ }
 }
 
 

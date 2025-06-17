@@ -1,5 +1,16 @@
 <!-- <p>Message from parent: {{ msgToChild }}</p>
 <button (click)="sendMessageToParent()">Send Message to Parent</button> -->
 <!-- <p>{{msgToChild}}</p> -->
-
-<button>Click</button>
+<div class="info">
+    <div>
+<label for="name">User Name : </label>
+<input [(ngModel)]="userName" id="name" type="text"/>
+</div>
+<div>
+<select [(ngModel)]="status">
+    <option value="Active">Active</option>
+    <option value="InActive">InActive</option>
+</select>
+</div>
+<button (click)="addUser()">Add User</button>
+</div>

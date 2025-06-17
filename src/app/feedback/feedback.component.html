@@ -1,0 +1,24 @@
+<div class="container">
+  <h2>Student Feedback Portal</h2>
+
+  <!-- Feedback Form -->
+  <form class="feedback-form">
+    <input type="text" [(ngModel)]="feedbackForm.name" name="name" placeholder="Enter your name" required />
+    <input type="text" [(ngModel)]="feedbackForm.course" name="course" placeholder="Enter course name" required />
+    <textarea [(ngModel)]="feedbackForm.comment" name="comment" placeholder="Enter your comment" required></textarea>
+    
+    <button class="btn submit" (click)="addOrUpdateFeedback()">
+      {{ feedbackForm.id ? 'Update' : 'Submit' }}
+    </button>
+  </form>
+
+  <!-- Feedback List -->
+  <div class="feedback-list">
+    <div *ngFor="let feedback of feedbackList" class="feedback-card">
+      <p><strong>Name: </strong> {{ feedback.name }} <br> <strong>Course: </strong>({{ feedback.course }})</p>
+      <p>{{ feedback.comment }}</p>
+      <button class="btn edit" (click)="editFeedback(feedback)">Edit</button>
+      <button class="btn delete" (click)="deleteFeedback(feedback)">Delete</button>
+    </div>
+  </div>
+</div>
