@@ -1,8 +1,8 @@
-<!-- <p>counter works!</p>
+<p>counter works!</p>
 <input [(ngModel)]="count" type="number"/>
-<p>Current Count: {{ count }}</p> -->
-<!-- <div >
-    <button class="bb" #ref (click)="onIncrement()">Increase</button>
-    <button class="bb" #ref (click)="onDecrement()">Decrease</button>
-    <button class="bb" #ref (click)="onreset()">Reset</button>
-</div> -->
+<p>Current Count: {{ count }}</p>
+ <div >
+    <button class="bb" #ref (click)="counterService.increment()">Increase</button>
+    <button class="bb" #ref (click)="counterService.decrement()">Decrease</button>
+    <button class="bb" #ref (click)="counterService.reset()">Reset</button>
+</div>

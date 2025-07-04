@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { UserServiceService } from '../user-service.service';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -10,14 +9,28 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './childd.component.css'
 })
 export class ChilddComponent {
-  constructor(private instance : UserServiceService){}
-userName='';
-status= "Active";
-addUser(){
-  this.instance.addUser(this.userName, this.status);
-  this.userName='';
-  this.status='';
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+//   constructor(private instance : UserServiceService){}
+// userName='';
+// status= "Active";
+// addUser(){
+//   this.instance.addUser(this.userName, this.status);
+//   this.userName='';
+//   this.status='';
+// }
 
 
 

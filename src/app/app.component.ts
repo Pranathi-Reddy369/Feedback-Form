@@ -9,15 +9,13 @@ import { ChilddComponent } from './childd/childd.component';
 import { ParentComponent } from './parent/parent.component';
 import { TaskParentComponent } from './task-parent/task-parent.component';
 import { TaskChildComponent } from './task-child/task-child.component';
-import { ProductsComponent } from './products/products.component';
-import { ProductCardComponent } from './product-card/product-card.component';
-import { CartItemsComponent } from './cart-items/cart-items.component';
-import { CRUDComponent } from './crud/crud.component';
 import { FeedbackComponent } from './feedback/feedback.component';
+import { CRUDComponent } from './crud/crud.component';
+import { DisplayComponent } from './display/display.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,ChildComponent,CommonModule,FormsModule,CounterComponent,DashboardComponent,ChilddComponent,ParentComponent,TaskParentComponent,TaskChildComponent,ProductsComponent,ProductCardComponent,CartItemsComponent,CRUDComponent,FeedbackComponent],
+  imports: [RouterOutlet,ChildComponent,CommonModule,FormsModule,DisplayComponent,CounterComponent,DashboardComponent,ChilddComponent,ParentComponent,TaskParentComponent,TaskChildComponent,CRUDComponent,FeedbackComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

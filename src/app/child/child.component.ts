@@ -8,9 +8,21 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './child.component.css'
 })
 export class ChildComponent {
-  @Input() counter=0; 
-  name="anil";
-//  constructor(){
+
+
+
+
+
+
+
+
+
+
+
+  
+//   @Input() counter=0; 
+//   name="anil";
+// //  constructor(){
 //   console.log("Constructor is running")
 //   this.name="si d";
 //  }
@@ -21,9 +33,9 @@ export class ChildComponent {
 //  ngOnDestroy(){
 //   console.log("ngOnDestroy is running")
 //  }
- ngOnChange(){
-  console.log("ngOnChange is running")
- }
+//  ngOnChange(){
+//   console.log("ngOnChange is running")
+//  }
 }
 
 
